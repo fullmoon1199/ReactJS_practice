@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>연습</title>
+    <script>
+      //function updateRangeValue(value) {
+      //  document.getElementById("rangeValue").textContent = value;
+      //}
+      const updateRangeValue = (value) => {
+        document.getElementById("rangeValue").textContent = value;
+      };
+    </script>
+  </head>
+  <body>
+    <h1>동물 고르기</h1>
+    <select name="pet" multiple>
+      <option value="dog">강아지</option>
+      <option value="cat" selected>고양이</option>
+      <option value="hamster">햄스터</option>
+      <option value="rabbit">토끼</option>
+      <option value="turtle">거북이</option>
+    </select>
+    <br />
+    <textarea name="content" rows="10" cols="10">default 텍스트</textarea>
+    <br />
+    <input
+      type="text"
+      placeholder="메세지 입력하세여"
+      maxlength="5"
+    /><br /><br />
+    <input type="button" value="push"/><br /><br />
+    <input type="color" /><br /><br />
+    <label for="range">값: <span id="rangeValue">75</span></label>
+    <input
+      type="range"
+      id="range"
+      max="100"
+      min="50"
+      step="5"
+      value="75"
+      oninput="updateRangeValue(this.value)"
+    /><br /><br />
+    <input type="date" /><br /><br />
+  </body>
+</html>
